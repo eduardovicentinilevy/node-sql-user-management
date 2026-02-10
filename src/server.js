@@ -2,14 +2,26 @@ import express from 'express';
 import { UserController } from './controller.js';
 
 const app = express();
-app.use(express.json()); // Permite que a API entenda JSON
+app.use(express.json());
 
-// Definição das Rotas REST
-app.post('/users', UserController.create); // Endpoint de Cadastro
-app.get('/users', UserController.list);    // Endpoint de Listagem
+// Rotas de Usuários
+app.post('/users', UserController.create);
+app.get('/users', UserController.list);
+app.delete('/users/:id', UserController.delete); // Rota com parâmetro ID
+
+// Rota de Auditoria
+app.get('/logs', UserController.getLogs);
 
 const PORT = 3000;
 app.listen(PORT, () => {
-    console.log(`🚀 Servidor rodando em http://localhost:${PORT}`);
-    console.log(`📌 Teste o GET em: http://localhost:3000/users`);
+    console.log(`
+    -------------------------------------------
+    ✅ API ATUALIZADA RODANDO
+    🚀 Endpoints disponíveis:
+       POST   /users
+       GET    /users
+       GET    /logs
+       DELETE /users/:id
+    -------------------------------------------
+    `);
 });
