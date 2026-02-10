@@ -1,0 +1,23 @@
+{
+  "name": "node-sql-user-management",
+  "version": "1.0.0",
+  "description": "API RESTful para gestão de usuários com foco em integridade e segurança.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardovicentinilevy/node-sql-user-management.git"
+  },
+  "author": "Eduardo Vicentini Levy",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.0.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}
