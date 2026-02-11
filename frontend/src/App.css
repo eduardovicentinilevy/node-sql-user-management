@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");
+
+:root {
+  --mahogany: #a0522d;
+  --spruce: #ebcf98;
+  --gold: #d4af37;
+  --bg-claro: #fef7ff;
+  --fonte: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--bg-claro);
+  font-family: var(--fonte);
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.header-principal h1 {
+  color: var(--mahogany);
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.header-principal p {
+  color: var(--mahogany);
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* FORMULÁRIO ESTILO LUTHIERIA */
+.form-cadastro {
+  background: var(--spruce);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+}
+
+.form-cadastro.modo-edicao {
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+}
+
+.inputs-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+input {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-family: var(--fonte);
+  min-width: 200px;
+}
+
+.btn-cadastrar {
+  background-color: var(--mahogany);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-cadastrar:hover { transform: scale(1.05); }
+
+/* CARDS MAJESTOSOS */
+.grid-usuarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card-usuario {
+  background: white;
+  border: 2px solid var(--mahogany);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  transition: box-shadow 0.3s;
+}
+
+.card-usuario:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+
+.card-header h3 { color: var(--mahogany); margin: 0; }
+.card-header p { color: #666; font-size: 0.9rem; margin: 5px 0 20px 0; }
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.badge-atividades {
+  background: var(--spruce);
+  color: var(--mahogany);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.btn-excluir-card {
+  background: transparent;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.btn-editar-card {
+  background: transparent;
+  color: var(--mahogany);
+  border: 1px solid var(--mahogany);
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
